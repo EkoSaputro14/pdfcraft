@@ -236,6 +236,10 @@ To run this project locally, follow these steps:
 4.  **Open your browser**
     Navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
 
+### 📱 Android (Tauri Mobile)
+
+PDFCraft now includes Tauri Mobile Android scaffolding. See [ANDROID.md](ANDROID.md) for prerequisites, emulator/device setup, and Android build commands.
+
 ### 🐳 Docker
 
 PDFCraft provides both pre-built Docker images and Docker Compose for flexible deployment options.
@@ -295,6 +299,11 @@ docker compose down
 - `npm run start`: Starts the production server.
 - `npm run lint`: Lints the code using ESLint.
 - `npm run test`: Runs tests using Vitest.
+- `npm run dev:tauri`: Runs the desktop Tauri shell in development mode.
+- `npm run build:tauri`: Builds desktop Tauri bundles.
+- `npm run android:init`: Initializes or regenerates the Tauri Android project.
+- `npm run android:dev`: Runs the Android app on an emulator or connected device.
+- `npm run android:build`: Builds Android release artifacts (APK/AAB).
 
 ## 🚀 Production Deployment Guide
 
