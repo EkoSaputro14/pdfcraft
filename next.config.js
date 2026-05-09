@@ -10,8 +10,13 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable static export for deployment flexibility
+const isGithubPages = process.env.GITHUB_ACTIONS || process.env.NODE_ENV === 'production';
+
+const nextConfig = {
   output: 'export',
-  assetPrefix: process.env.TAURI_ENV ? '/' : undefined,
+
+  basePath: isGithubPages ? '/pdfcraft' : '',
+  assetPrefix: isGithubPages ? '/pdfcraft/' : undefined,
 
   // Webpack configuration for WASM modules
   webpack: (config, { isServer, webpack }) => {
