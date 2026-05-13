@@ -72,3 +72,9 @@ public/libreoffice-wasm/soffice.data
 # Tauri / Cargo (local build output)
 src-tauri/target/
 
+# Tauri Android / Gradle local output
+src-tauri/gen/android/.gradle/
+src-tauri/gen/android/.idea/
+src-tauri/gen/android/local.properties
+src-tauri/gen/android/**/build/
+src-tauri/gen/android/.tauri/
